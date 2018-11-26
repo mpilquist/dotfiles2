@@ -7,7 +7,7 @@ if [ ! $(which brew) ]; then
 fi
 
 brew update
-brew upgrade
+brew upgrade || true
 brew install fish vim the_silver_searcher tree sbt scala
 
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/fish
