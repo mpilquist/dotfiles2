@@ -15,11 +15,13 @@ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/fish
 mkdir -p ~/.config/fish
 
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
-ln -s "$SCRIPTPATH"/.config/fish/config.fish ~/.config/fish/config.fish
-mkdir ~/.config/fish/functions
-ln -s "$SCRIPTPATH"/.config/fish/functions/* ~/.config/fish/functions/
-ln -s "$SCRIPTPATH"/.config/fish/fishfile ~/.config/fish/fishfile
-ln -s "$SCRIPTPATH"/.vimrc ~/.vimrc
+ln -s "$SCRIPTPATH"/.config/fish/config.fish ~/.config/fish/config.fish || true
+mkdir -p ~/.config/fish/functions
+ln -s "$SCRIPTPATH"/.config/fish/functions/* ~/.config/fish/functions/ || true
+ln -s "$SCRIPTPATH"/.config/fish/fishfile ~/.config/fish/fishfile || true
+mkdir -p ~/.ammonite/
+ln -s "$SCRIPTPATH"/predef.sc ~/.ammonite/predef.sc || true
+ln -s "$SCRIPTPATH"/.vimrc ~/.vimrc || true
 
 VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
 if [ ! -d "$VUNDLE_DIR" ]; then
