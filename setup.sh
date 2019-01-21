@@ -8,7 +8,14 @@ fi
 
 brew update
 brew upgrade || true
-brew install fish vim the_silver_searcher tree sbt scala
+brew bundle install --file=- <<-EOF
+brew "fish"
+brew "vim"
+brew "the_silver_searcher"
+brew "tree"
+brew "sbt"
+brew "scala"
+EOF
 
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/fish
 
