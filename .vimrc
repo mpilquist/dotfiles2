@@ -9,6 +9,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'jacoborus/tender.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -28,8 +29,12 @@ inoremap jj <Esc>
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|target'
 
-set background=dark
-silent! colorscheme solarized
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+syntax enable
+colorscheme tender
 
 if has("clipboard")
   set clipboard=unnamed
