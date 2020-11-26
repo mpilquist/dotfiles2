@@ -1,21 +1,4 @@
-# From https://gist.github.com/tobias/aab714378333e8a7bbc40f4f1d621147
-
 function setjdk
-   if test -n "$JAVA_HOME"
-     removeFromPath "$JAVA_HOME/bin"
-   end
-   set -gx JAVA_HOME (/usr/libexec/java_home -v $argv[1])
-   set -gx PATH $JAVA_HOME/bin $PATH
+  fenv (cs java --jvm $argv[1] --env)
 end
 
-function removeFromPath
-  set -l idx 0
-  for x in (seq (count $PATH))
-    if test "$argv[1]" = "$PATH[$x]"
-      set idx $x
-    end
-  end
-  if test $idx -gt 0
-    set -e PATH[$idx]
-  end
-end

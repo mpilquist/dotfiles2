@@ -11,3 +11,7 @@ end
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
+set fish_function_path $fish_function_path ~/.dotfiles/plugin-foreign-env/functions
+
+fenv source ~/.profile
+
