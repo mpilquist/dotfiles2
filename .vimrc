@@ -10,6 +10,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jacoborus/tender.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'lifepillar/vim-solarized8'
 
 call vundle#end()
 filetype plugin indent on
@@ -34,7 +36,7 @@ if (has("termguicolors"))
 endif
 
 syntax enable
-colorscheme tender
+colorscheme solarized8
 
 if has("clipboard")
   set clipboard=unnamed
