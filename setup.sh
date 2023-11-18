@@ -21,7 +21,7 @@ EOF
 brew install coursier/formulas/coursier
 brew install Virtuslab/scala-cli/scala-cli
 
-sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/fish
+sudo dscl . -create /Users/$USER UserShell $(which fish)
 
 mkdir -p ~/.config/fish
 
