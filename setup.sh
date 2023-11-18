@@ -3,7 +3,10 @@ set -o errexit
 
 if [ ! $(which brew) ]; then
   echo "Installing Homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 brew update
@@ -13,10 +16,12 @@ brew "fish"
 brew "vim"
 brew "the_silver_searcher"
 brew "tree"
-brew "coursier/formulas/coursier"
 EOF
 
-sudo dscl . -create /Users/$USER UserShell /usr/local/bin/fish
+brew install coursier/formulas/coursier
+brew install Virtuslab/scala-cli/scala-cli
+
+sudo dscl . -create /Users/$USER UserShell /opt/homebrew/bin/fish
 
 mkdir -p ~/.config/fish
 
@@ -36,3 +41,5 @@ if [ ! -d "$VUNDLE_DIR" ]; then
 fi
 
 vim +PluginInstall +qall
+
+cs setup --apps sbt-launcher
