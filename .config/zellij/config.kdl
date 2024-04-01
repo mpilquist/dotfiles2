@@ -1,2 +1,19 @@
 theme "solarized-dark"
 // theme "solarized-light"
+
+pane_frames false
+
+ui {
+	pane_frames {
+		rounded_corners true
+		hide_session_name true
+	}
+}
+
+keybinds {
+	unbind "Ctrl b"
+	pane {
+		bind "b" { TogglePaneFrames; }
+	}
+
+}

@@ -20,7 +20,7 @@ brew "helix"
 brew "zellij"
 EOF
 
-brew install alacritty
+brew install alacritty wezterm
 brew install coursier/formulas/coursier
 brew install Virtuslab/scala-cli/scala-cli
 
@@ -34,11 +34,12 @@ mkdir -p ~/.config/fish/functions
 ln -s "$SCRIPTPATH"/.config/fish/functions/* ~/.config/fish/functions/ || true
 ln -s "$SCRIPTPATH"/.config/fish/fishfile ~/.config/fish/fishfile || true
 ln -s "$SCRIPTPATH"/.config/helix/config.toml ~/.config/helix/config.toml || true
-ln -s "$SCRIPTPATH"/.config/alacritty ~/.config/alacritty || true
-ln -s "$SCRIPTPATH"/.config/alacritty ~/.config/zellij || true
+ln -sF "$SCRIPTPATH"/.config/alacritty ~/.config/ || true
+ln -sF "$SCRIPTPATH"/.config/zellij ~/.config/ || true
 mkdir -p ~/.ammonite/
 ln -s "$SCRIPTPATH"/predef.sc ~/.ammonite/predef.sc || true
 ln -s "$SCRIPTPATH"/.vimrc ~/.vimrc || true
+ln -s "$SCRIPTPATH"/.wezterm.lua ~/.wezterm.lua || true
 
 VUNDLE_DIR="$HOME/.vim/bundle/Vundle.vim"
 if [ ! -d "$VUNDLE_DIR" ]; then
