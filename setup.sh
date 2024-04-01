@@ -16,8 +16,11 @@ brew "fish"
 brew "vim"
 brew "the_silver_searcher"
 brew "tree"
+brew "helix"
+brew "zellij"
 EOF
 
+brew install alacritty
 brew install coursier/formulas/coursier
 brew install Virtuslab/scala-cli/scala-cli
 
@@ -31,6 +34,8 @@ mkdir -p ~/.config/fish/functions
 ln -s "$SCRIPTPATH"/.config/fish/functions/* ~/.config/fish/functions/ || true
 ln -s "$SCRIPTPATH"/.config/fish/fishfile ~/.config/fish/fishfile || true
 ln -s "$SCRIPTPATH"/.config/helix/config.toml ~/.config/helix/config.toml || true
+ln -s "$SCRIPTPATH"/.config/alacritty ~/.config/alacritty || true
+ln -s "$SCRIPTPATH"/.config/alacritty ~/.config/zellij || true
 mkdir -p ~/.ammonite/
 ln -s "$SCRIPTPATH"/predef.sc ~/.ammonite/predef.sc || true
 ln -s "$SCRIPTPATH"/.vimrc ~/.vimrc || true

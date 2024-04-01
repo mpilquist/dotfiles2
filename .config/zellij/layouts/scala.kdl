@@ -1,0 +1,19 @@
+layout {
+    pane split_direction="horizontal" {
+        pane borderless=true command="hx"
+		pane size=10 borderless=true command="sbt"
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    new_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane borderless=true
+        pane size=2 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

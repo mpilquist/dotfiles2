@@ -1,6 +1,8 @@
 set fish_greeting
 fish_vi_key_bindings
 
+set EDITOR hx
+
 set PATH /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin $PATH
 
 if not functions -q fisher

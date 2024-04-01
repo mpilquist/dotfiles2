@@ -4,6 +4,8 @@ theme = "solarized_dark"
 true-color = true
 color-modes = true
 bufferline = "always"
+auto-save = true
+soft-wrap.enable = true
 
 [editor.indent-guides]
 render = true
