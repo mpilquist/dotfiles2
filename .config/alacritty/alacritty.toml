@@ -6,3 +6,4 @@ import = [
 [window]
 dimensions = { columns = 200, lines = 60 }
 option_as_alt = "Both"
+
