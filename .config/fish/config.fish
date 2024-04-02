@@ -6,7 +6,7 @@ set EDITOR hx
 set PATH /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin $PATH
 
 if not functions -q fisher
-    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && fisher install jethrokuan/z && fisher install edc/bass
+    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && fisher install jethrokuan/z && fisher install edc/bass && fisher install IlanCosman/tide@v6
 end
 
 test -e {$HOME}/.iterm2_shell_integration.fish; and source {$HOME}/.iterm2_shell_integration.fish

@@ -18,6 +18,7 @@ brew "the_silver_searcher"
 brew "tree"
 brew "helix"
 brew "zellij"
+brew "fd"
 EOF
 
 brew install alacritty wezterm

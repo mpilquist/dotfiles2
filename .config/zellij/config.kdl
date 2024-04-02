@@ -12,6 +12,10 @@ ui {
 
 keybinds {
 	unbind "Ctrl b"
+	// use ctrl-L instead
+	// normal {
+	// 	bind "Ctrl k" { Clear; }
+	// }
 	pane {
 		bind "b" { TogglePaneFrames; }
 	}
