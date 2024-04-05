@@ -25,6 +25,9 @@ brew install alacritty wezterm
 brew install coursier/formulas/coursier
 brew install Virtuslab/scala-cli/scala-cli
 
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+
 sudo dscl . -create /Users/$USER UserShell $(which fish)
 
 mkdir -p ~/.config/fish

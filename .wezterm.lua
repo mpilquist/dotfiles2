@@ -2,6 +2,8 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 local config = {}
 
+config.font = wezterm.font_with_fallback { 'Fira Code', 'JetBrains Mono' }
+
 -- config.color_scheme = 'Solarized Dark - Patched'
 -- config.color_scheme = 'Solarized (dark) (terminal.sexy)'
 -- config.color_scheme = 'Selenized Dark (Gogh)'
