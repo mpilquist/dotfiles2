@@ -21,7 +21,7 @@ brew "zellij"
 brew "fd"
 EOF
 
-brew install alacritty wezterm
+brew install alacritty wezterm bat dust broot ripgrep tokei eva
 brew install coursier/formulas/coursier
 brew install Virtuslab/scala-cli/scala-cli
 
@@ -38,6 +38,7 @@ mkdir -p ~/.config/fish/functions
 ln -s "$SCRIPTPATH"/.config/fish/functions/* ~/.config/fish/functions/ || true
 ln -s "$SCRIPTPATH"/.config/fish/fishfile ~/.config/fish/fishfile || true
 ln -s "$SCRIPTPATH"/.config/helix/config.toml ~/.config/helix/config.toml || true
+ln -s "$SCRIPTPATH"/.config/bat/config ~/.config/bat/config || true
 ln -sF "$SCRIPTPATH"/.config/alacritty ~/.config/ || true
 ln -sF "$SCRIPTPATH"/.config/zellij ~/.config/ || true
 mkdir -p ~/.ammonite/
