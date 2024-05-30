@@ -21,7 +21,7 @@ brew "zellij"
 brew "fd"
 EOF
 
-brew install alacritty wezterm bat dust broot ripgrep tokei eva atuin
+brew install alacritty wezterm bat dust broot ripgrep tokei eva atuin lsd
 brew install coursier/formulas/coursier
 brew install Virtuslab/scala-cli/scala-cli
 
