@@ -23,3 +23,13 @@ if status is-interactive
 
     atuin init fish | source
 end
+
+
+
+# >>> JVM installed by coursier >>>
+set -gx JAVA_HOME "/Users/mpilqu0037e@cable.comcast.com/Library/Caches/Coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.26%252B4/OpenJDK11U-jdk_aarch64_mac_hotspot_11.0.26_4.tar.gz/jdk-11.0.26+4/Contents/Home"
+# <<< JVM installed by coursier <<<
+
+# >>> coursier install directory >>>
+set -gx PATH "$PATH:/Users/mpilqu0037e@cable.comcast.com/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<

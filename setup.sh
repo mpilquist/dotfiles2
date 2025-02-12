@@ -22,10 +22,12 @@ brew "fd"
 EOF
 
 brew install alacritty wezterm bat dust broot ripgrep tokei eva atuin lsd
-brew install coursier/formulas/coursier
+# brew install coursier/formulas/coursier
+# https://github.com/coursier/homebrew-formulas/pull/12
+brew install mtgto/formulas/coursier
 brew install Virtuslab/scala-cli/scala-cli
 
-brew tap homebrew/cask-fonts
+#brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
 
 sudo dscl . -create /Users/$USER UserShell $(which fish)
